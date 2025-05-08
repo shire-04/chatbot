@@ -1,0 +1,2 @@
+[console_scripts]
+trafficLights = hawksoft.trafficLights:main
