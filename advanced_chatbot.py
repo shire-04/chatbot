@@ -37,13 +37,13 @@ class AgentState(TypedDict):
 
 # 初始化模型和 Tavily 搜索
 model = ChatOpenAI(
-    api_key=api_key,  # 直接使用变量而不是os.getenv()
-    base_url="https://openrouter.ai/api/v1",
-    model_name="google/gemma-3-27b-it:free",
-    default_headers={
-        "HTTP-Referer": "http://localhost:8501",  # 您的应用URL
-        "X-Title": "Advanced Chatbot"  # 您的应用名称
-    }
+    openai_api_key=api_key,  # 修改参数名称
+    openai_api_base="https://openrouter.ai/api/v1",  # 修改参数名称
+    model_name="google/gemma-3-12b-it:free",
+    # default_headers={
+    #     "HTTP-Referer": "http://localhost:8501",  # 您的应用URL
+    #     "X-Title": "Advanced Chatbot",  # 您的应用名称
+    # }
 )
 
 # 初始化 Tavily 搜索
